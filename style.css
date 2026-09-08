@@ -433,3 +433,141 @@ p{
     }
 
 }
+/* =========================================
+   BOTTOM ACTION BUTTONS
+   MOBILE ENHANCEMENT STYLE
+========================================= */
+
+.save-contact,
+.call-btn {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #5B2DA8;
+    color: #ffffff;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 15px;
+
+    padding: 18px 20px;
+    margin: 25px 0;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease,
+                background 0.15s ease;
+}
+
+.save-contact:hover,
+.call-btn:hover {
+    background: #4d2490;
+    color: #ffffff;
+}
+
+.save-contact:active,
+.call-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   TOP UP QR CARD
+========================================= */
+
+.topup {
+    margin-top: 35px;
+
+    background: #fafafa;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* TOP UP HEADING */
+
+.topup h2 {
+    color: #5B2DA8;
+
+    font-size: 34px;
+
+    margin: 0 0 20px 0;
+
+    text-align: center;
+}
+
+
+/* QR CODE */
+
+.topup img {
+    display: block;
+
+    width: 220px;
+    max-width: 100%;
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* QR DESCRIPTION */
+
+.topup p {
+    color: #555555;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    margin: 18px 0 0 0;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .save-contact,
+    .call-btn {
+        font-size: 21px;
+        padding: 18px 15px;
+        border-radius: 15px;
+    }
+
+    .topup {
+        margin-top: 35px;
+        padding: 25px 18px;
+        border-radius: 18px;
+    }
+
+    .topup h2 {
+        font-size: 32px;
+    }
+
+    .topup img {
+        width: 220px;
+    }
+
+}
