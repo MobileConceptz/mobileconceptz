@@ -1,19 +1,26 @@
 /* =========================================
-   Mobile Conceptz
-   style.css
+   MOBILE CONCEPTZ
+   COMPLETE STYLE.CSS
 ========================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#f3f3f7;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-    padding:20px;
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #f3f3f7;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -21,13 +28,14 @@ body{
    MAIN CARD
 ========================================= */
 
-.card{
-    max-width:700px;
-    margin:auto;
-    background:#fff;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
+.card {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -35,18 +43,18 @@ body{
    LOGO
 ========================================= */
 
-.logo{
-    text-align:center;
-    margin-bottom:20px;
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.logo img{
-    display:block;
-    width:60%;
-    max-width:360px;
-    min-width:220px;
-    height:auto;
-    margin:0 auto;
+.logo img {
+    display: block;
+    width: 60%;
+    max-width: 360px;
+    min-width: 220px;
+    height: auto;
+    margin: 0 auto;
 }
 
 
@@ -54,27 +62,27 @@ body{
    HEADINGS
 ========================================= */
 
-h2{
-    color:#5B2DA8;
-    text-align:center;
-    margin-bottom:20px;
-    font-size:32px;
+h2 {
+    color: #5B2DA8;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
 }
 
-h3{
-    color:#5B2DA8;
-    font-size:30px;
-    margin-bottom:12px;
+h3 {
+    color: #5B2DA8;
+    font-size: 30px;
+    margin-bottom: 12px;
 }
 
 
 /* =========================================
-   PARAGRAPH
+   PARAGRAPHS
 ========================================= */
 
-p{
-    font-size:18px;
-    line-height:1.6;
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 
@@ -82,10 +90,11 @@ p{
    SECTIONS
 ========================================= */
 
-.section{
-    border-top:1px solid #dddddd;
-    padding-top:18px;
-    margin-top:30px;
+.section {
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    padding-top: 18px;
+    margin-top: 30px;
 }
 
 
@@ -93,20 +102,10 @@ p{
    GOOGLE MAP BUTTON
 ========================================= */
 
-.map-btn{
-    display:block;
-    margin-top:8px;
-    margin-bottom:12px;
-}
-
-
-/* =========================================
-   NORTH SECOND OUTLET
-========================================= */
-
-.north-outlet{
-    margin-top:30px;
-    margin-bottom:10px;
+.map-btn {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
 
@@ -114,64 +113,80 @@ p{
    HEAD OFFICE
 ========================================= */
 
-.head-office{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
+.head-office {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
 }
 
-.head-office-img{
-    width:100px;
-    height:100px;
-    object-fit:cover;
-    display:block;
-    border-radius:12px;
-    flex-shrink:0;
+
+/* IMPORTANT:
+   This prevents the Head Office photo
+   from becoming huge.
+*/
+
+.head-office-img {
+    display: block !important;
+
+    width: 100px !important;
+    min-width: 100px !important;
+    max-width: 100px !important;
+
+    height: 100px !important;
+    min-height: 100px !important;
+    max-height: 100px !important;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    flex: 0 0 100px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.head-office-info{
-    flex:1;
+
+/* Head Office text */
+
+.head-office-info {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
-.head-office-info h3{
-    margin-top:0;
+.head-office-info h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
 }
 
 
 /* =========================================
-   ADMIRALTY OUTLET
+   OUTLETS
 ========================================= */
 
-.admiralty-outlet{
-    display:flex;
-    gap:20px;
-    align-items:flex-start;
-    margin-top:5px;
-    margin-bottom:35px;
+.outlet {
+    width: 100%;
+    margin-bottom: 30px;
 }
 
-.outlet-photo{
-    width:100px;
-    flex-shrink:0;
+.outlet-details {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-.outlet-photo img{
-    width:100px;
-    height:100px;
-    object-fit:cover;
-    display:block;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+.outlet-details strong {
+    font-weight: bold;
 }
 
-.outlet-details{
-    flex:1;
-    font-size:18px;
-    line-height:1.6;
-}
 
-.outlet-details strong{
-    font-weight:bold;
+/* =========================================
+   NORTH
+========================================= */
+
+.north-outlet {
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 
@@ -179,266 +194,6 @@ p{
    CALL BUTTON
 ========================================= */
 
-.call-btn{
-    display:block;
-    width:100%;
-    text-align:center;
-    background:#5B2DA8;
-    color:#fff;
-    text-decoration:none;
-    padding:18px;
-    border-radius:15px;
-    margin-top:25px;
-    font-size:22px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.call-btn:hover{
-    background:#45208A;
-}
-
-
-/* =========================================
-   SAVE CONTACT
-========================================= */
-
-.save-contact{
-    display:block;
-    width:100%;
-    background:#5B2DA8;
-    color:#fff;
-    text-decoration:none;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    padding:18px;
-    border-radius:14px;
-    margin:25px 0;
-    transition:.3s;
-}
-
-.save-contact:hover{
-    background:#47218f;
-}
-
-
-/* =========================================
-   QR SECTION
-========================================= */
-
-.topup{
-    text-align:center;
-    margin-top:35px;
-    background:#fafafa;
-    border-radius:18px;
-    padding:25px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.topup h2{
-    margin-top:0;
-    margin-bottom:20px;
-    color:#5B2DA8;
-}
-
-.topup img{
-    width:220px;
-    max-width:100%;
-    display:block;
-    margin:20px auto;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.18);
-}
-
-.topup p{
-    color:#666;
-    font-size:16px;
-}
-
-
-/* =========================================
-   SAVE TO HOME SCREEN MODAL
-========================================= */
-
-.modal{
-    display:none;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.55);
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-.modal-box{
-    width:90%;
-    max-width:450px;
-    background:#fff;
-    border-radius:20px;
-    padding:30px;
-    position:relative;
-    box-shadow:0 15px 40px rgba(0,0,0,.25);
-    animation:popup .25s ease;
-}
-
-@keyframes popup{
-
-    from{
-        transform:scale(.9);
-        opacity:0;
-    }
-
-    to{
-        transform:scale(1);
-        opacity:1;
-    }
-
-}
-
-.close{
-    position:absolute;
-    top:12px;
-    right:18px;
-    font-size:34px;
-    cursor:pointer;
-    color:#5B2DA8;
-    font-weight:bold;
-}
-
-.modal-box h2{
-    text-align:center;
-    color:#5B2DA8;
-    margin-bottom:12px;
-}
-
-.modal-intro{
-    text-align:center;
-    color:#666;
-    margin-bottom:20px;
-}
-
-.phone-box{
-    background:#f7f4ff;
-    border-radius:12px;
-    padding:15px;
-    margin-bottom:18px;
-}
-
-.phone-box h3{
-    font-size:22px;
-    margin-bottom:10px;
-    color:#5B2DA8;
-}
-
-.phone-box ol{
-    padding-left:22px;
-    line-height:1.8;
-    font-size:17px;
-}
-
-.done-btn{
-    width:100%;
-    padding:16px;
-    background:#5B2DA8;
-    color:#fff;
-    border:none;
-    border-radius:14px;
-    font-size:20px;
-    font-weight:bold;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.done-btn:hover{
-    background:#47218f;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width:1000px){
-
-    body{
-        padding:12px;
-    }
-
-    .card{
-        padding:20px;
-    }
-
-    .logo img{
-        max-width:260px;
-    }
-
-    h2{
-        font-size:28px;
-    }
-
-    h3{
-        font-size:24px;
-    }
-
-    p{
-        font-size:17px;
-    }
-
-    .call-btn{
-        font-size:20px;
-        padding:16px;
-    }
-
-    .topup img{
-        width:180px;
-    }
-
-
-    /* Head Office */
-
-    .head-office{
-        gap:20px;
-    }
-
-    .head-office-img{
-        width:100px;
-        height:100px;
-    }
-
-
-    /* Admiralty */
-
-    .admiralty-outlet{
-        gap:20px;
-        margin-top:5px;
-        margin-bottom:35px;
-    }
-
-    .outlet-photo{
-        width:100px;
-    }
-
-    .outlet-photo img{
-        width:100px;
-        height:100px;
-    }
-
-    .outlet-details{
-        font-size:17px;
-        line-height:1.5;
-    }
-
-}
-/* =========================================
-   BOTTOM ACTION BUTTONS
-   MOBILE ENHANCEMENT STYLE
-========================================= */
-
-.save-contact,
 .call-btn {
     display: block;
     width: 100%;
@@ -461,18 +216,58 @@ p{
 
     cursor: pointer;
 
-    transition: transform 0.15s ease,
-                background 0.15s ease;
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
 }
 
-.save-contact:hover,
 .call-btn:hover {
     background: #4d2490;
     color: #ffffff;
 }
 
-.save-contact:active,
 .call-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================
+   SAVE CONTACT
+========================================= */
+
+.save-contact {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #5B2DA8;
+    color: #ffffff;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 15px;
+
+    padding: 18px 20px;
+    margin: 25px 0;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+}
+
+.save-contact:hover {
+    background: #4d2490;
+    color: #ffffff;
+}
+
+.save-contact:active {
     transform: scale(0.98);
 }
 
@@ -482,6 +277,7 @@ p{
 ========================================= */
 
 .topup {
+    width: 100%;
     margin-top: 35px;
 
     background: #fafafa;
@@ -497,15 +293,12 @@ p{
 }
 
 
-/* TOP UP HEADING */
+/* Top Up heading */
 
 .topup h2 {
     color: #5B2DA8;
-
     font-size: 34px;
-
     margin: 0 0 20px 0;
-
     text-align: center;
 }
 
@@ -530,16 +323,170 @@ p{
 }
 
 
-/* QR DESCRIPTION */
+/* QR description */
 
 .topup p {
     color: #555555;
-
     font-size: 16px;
-
     line-height: 1.5;
-
     margin: 18px 0 0 0;
+}
+
+
+/* =========================================
+   SAVE TO HOME SCREEN MODAL
+========================================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+/* Modal box */
+
+.modal-box {
+    width: 90%;
+    max-width: 450px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    animation: popup 0.25s ease;
+}
+
+
+/* Modal animation */
+
+@keyframes popup {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+/* Close button */
+
+.close {
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    font-size: 34px;
+
+    cursor: pointer;
+
+    color: #5B2DA8;
+
+    font-weight: bold;
+}
+
+
+/* Modal heading */
+
+.modal-box h2 {
+    text-align: center;
+    color: #5B2DA8;
+    margin-bottom: 12px;
+}
+
+
+/* Modal introduction */
+
+.modal-intro {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PHONE INSTRUCTIONS
+========================================= */
+
+.phone-box {
+    background: #f7f4ff;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 18px;
+}
+
+.phone-box h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #5B2DA8;
+}
+
+.phone-box ol {
+    padding-left: 22px;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   DONE BUTTON
+========================================= */
+
+.done-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    background: #5B2DA8;
+    color: #ffffff;
+
+    border: none;
+
+    border-radius: 14px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.done-btn:hover {
+    background: #47218f;
 }
 
 
@@ -547,27 +494,177 @@ p{
    MOBILE RESPONSIVE
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
 
-    .save-contact,
-    .call-btn {
-        font-size: 21px;
-        padding: 18px 15px;
-        border-radius: 15px;
+    body {
+        padding: 12px;
     }
 
-    .topup {
-        margin-top: 35px;
-        padding: 25px 18px;
-        border-radius: 18px;
+    .card {
+        width: 100%;
+        padding: 20px;
     }
 
-    .topup h2 {
-        font-size: 32px;
+    .logo img {
+        max-width: 260px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    .call-btn,
+    .save-contact {
+        font-size: 20px;
+        padding: 16px;
     }
 
     .topup img {
-        width: 220px;
+        width: 180px;
     }
 
+    /* Head Office */
+
+    .head-office {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .head-office-img {
+        width: 100px !important;
+        min-width: 100px !important;
+        max-width: 100px !important;
+
+        height: 100px !important;
+        min-height: 100px !important;
+        max-height: 100px !important;
+
+        flex: 0 0 100px;
+    }
+
+    .head-office-info {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .outlet-details {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .logo img {
+        width: 80%;
+        min-width: 180px;
+        max-width: 240px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .head-office {
+        gap: 15px;
+    }
+
+    .head-office-img {
+        width: 90px !important;
+        min-width: 90px !important;
+        max-width: 90px !important;
+
+        height: 90px !important;
+        min-height: 90px !important;
+        max-height: 90px !important;
+
+        flex-basis: 90px;
+    }
+
+    .head-office-info {
+        min-width: 0;
+    }
+
+    .head-office-info h3 {
+        font-size: 23px;
+    }
+
+    .outlet-details {
+        font-size: 16px;
+    }
+
+    .call-btn,
+    .save-contact {
+        font-size: 19px;
+        padding: 16px 14px;
+    }
+
+    .topup {
+        margin-top: 30px;
+        padding: 22px 16px;
+    }
+
+    .topup h2 {
+        font-size: 28px;
+    }
+
+    .topup img {
+        width: 200px;
+    }
+
+    .modal-box {
+        width: 94%;
+        padding: 24px;
+    }
+
+}
+
+
+/* =========================================
+   FINAL SAFETY FIX
+   PREVENT IMAGES FROM BREAKING LAYOUT
+========================================= */
+
+.head-office > img.head-office-img {
+    width: 100px !important;
+    height: 100px !important;
+    max-width: 100px !important;
+    min-width: 100px !important;
+    max-height: 100px !important;
+    min-height: 100px !important;
+    object-fit: cover !important;
+    flex: 0 0 100px !important;
 }
