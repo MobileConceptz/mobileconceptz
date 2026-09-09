@@ -1,8 +1,16 @@
-/* =========================================
-   MOBILE CONCEPTZ - MAIN CSS
-========================================= */
+/* =========================================================
+   MOBILE CONCEPTZ
+   COMPLETE CLEAN CSS
+========================================================= */
 
-* {
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -18,27 +26,32 @@ body {
     color: #111;
 }
 
-/* =========================================
+
+/* =========================================================
    MAIN CARD
-========================================= */
+========================================================= */
 
 .card {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
     padding: 30px;
+    background: #ffffff;
     border-radius: 18px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
+
+    overflow: hidden;
 }
 
-/* =========================================
+
+/* =========================================================
    LOGO
-========================================= */
+========================================================= */
 
 .logo {
+    width: 100%;
     text-align: center;
-    margin-bottom: 35px;
+    margin: 0 0 35px 0;
 }
 
 .logo img {
@@ -49,62 +62,100 @@ body {
     margin: 0 auto;
 }
 
-/* =========================================
+
+/* =========================================================
    HEADINGS
-========================================= */
+========================================================= */
 
 h2 {
+    margin: 20px 0;
     color: #5b2bb5;
     text-align: center;
     font-size: 30px;
-    margin: 20px 0;
+    line-height: 1.2;
 }
 
 h3 {
+    margin: 0 0 15px 0;
     color: #5b2bb5;
     font-size: 28px;
-    margin: 0 0 15px 0;
+    line-height: 1.2;
 }
 
-/* =========================================
+
+/* =========================================================
    SERVICES
-========================================= */
+========================================================= */
 
 .card > p {
+    margin: 0 0 35px 0;
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
-    margin: 0 0 35px 0;
 }
 
-/* =========================================
-   SECTIONS
-========================================= */
+
+/* =========================================================
+   SECTION
+========================================================= */
 
 .section {
+    display: block;
     width: 100%;
-    border-top: 1px solid #ddd;
-    padding-top: 25px;
-    margin-top: 25px;
+    clear: both;
+
+    margin: 25px 0 0 0;
+    padding: 25px 0 0 0;
+
+    border-top: 1px solid #dddddd;
 }
 
-/* =========================================
-   HEAD OFFICE
-========================================= */
 
-.head-office {
+/* =========================================================
+   HEAD OFFICE
+========================================================= */
+
+/*
+   IMPORTANT:
+   Head Office is a ROW.
+   Photo stays on the left.
+   Text stays on the right.
+*/
+
+.card .section .head-office {
     display: flex !important;
     flex-direction: row !important;
     align-items: flex-start !important;
-    gap: 20px !important;
+
     width: 100% !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 100px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    gap: 20px !important;
+
+    position: relative !important;
+
+    overflow: visible !important;
 }
 
-/* HEAD OFFICE PHOTO
-   Fixed size so it cannot stretch
+
+/* =========================================================
+   HEAD OFFICE PHOTO
+========================================================= */
+
+/*
+   THIS IS THE IMPORTANT PART.
+
+   The selector is intentionally very specific
+   so other img rules cannot make this photo huge.
 */
 
-.head-office-img {
+.card .section .head-office > img.head-office-img {
     display: block !important;
 
     width: 100px !important;
@@ -119,62 +170,62 @@ h3 {
     flex: 0 0 100px !important;
 
     object-fit: cover !important;
-
-    border-radius: 12px !important;
+    object-position: center !important;
 
     margin: 0 !important;
     padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 12px !important;
+
+    position: relative !important;
+
+    float: none !important;
+
+    transform: none !important;
 }
 
-/* HEAD OFFICE INFORMATION */
 
-.head-office-info {
-    flex: 1 1 auto !important;
-    min-width: 0 !important;
+/* =========================================================
+   HEAD OFFICE INFORMATION
+========================================================= */
+
+.card .section .head-office > .head-office-info {
+    display: block !important;
+
     width: auto !important;
+    max-width: calc(100% - 120px) !important;
+
+    flex: 1 1 auto !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    position: relative !important;
 }
 
 .head-office-info h3 {
     margin: 0 0 12px 0 !important;
+
     color: #5b2bb5;
+
     font-size: 28px;
+    line-height: 1.2;
 }
 
 .head-office-info p {
+    margin: 8px 0;
+
     font-size: 17px;
     line-height: 1.55;
-    margin: 8px 0;
 }
 
-/* =========================================
-   OUTLETS
-========================================= */
 
-.outlet {
-    width: 100%;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.outlet-details {
-    width: 100%;
-}
-
-.outlet-details strong {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.outlet-details p {
-    font-size: 17px;
-    line-height: 1.55;
-    margin: 8px 0;
-}
-
-/* =========================================
+/* =========================================================
    LINKS
-========================================= */
+========================================================= */
 
 a {
     color: #0000ee;
@@ -182,41 +233,90 @@ a {
 
 .map-btn {
     display: inline-block;
+
     margin-top: 5px;
+
     font-size: 16px;
+    line-height: 1.4;
 }
 
-/* =========================================
+
+/* =========================================================
+   OUTLETS
+========================================================= */
+
+.outlet {
+    display: block;
+
+    width: 100%;
+
+    clear: both;
+
+    margin: 0;
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.outlet-details {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.outlet-details strong {
+    display: block;
+
+    margin: 0 0 8px 0;
+
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.outlet-details p {
+    margin: 8px 0;
+
+    font-size: 17px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
    ACTION BUTTONS
-========================================= */
+========================================================= */
 
 .call-btn,
 .save-contact {
     display: block;
+
     width: 100%;
+
+    margin-top: 15px;
+    padding: 16px 20px;
+
+    border: none;
+    border-radius: 12px;
+
     text-align: center;
     text-decoration: none;
-
-    padding: 16px 20px;
-    margin-top: 15px;
-
-    border-radius: 12px;
 
     font-size: 18px;
     font-weight: bold;
 
     cursor: pointer;
-    border: none;
 }
 
 .call-btn {
     background: #5b2bb5;
-    color: #fff;
+    color: #ffffff;
 }
 
 .save-contact {
     background: #5b2bb5;
-    color: #fff;
+    color: #ffffff;
 }
 
 .call-btn:hover,
@@ -224,15 +324,21 @@ a {
     opacity: 0.9;
 }
 
-/* =========================================
+
+/* =========================================================
    TOP UP
-========================================= */
+========================================================= */
 
 .topup {
+    display: block;
+
+    width: 100%;
+
     margin-top: 30px;
     padding: 25px;
 
-    background: #fff;
+    background: #ffffff;
+
     border-radius: 15px;
 
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
@@ -256,13 +362,16 @@ a {
 }
 
 .topup p {
+    margin: 10px 0;
+
     font-size: 16px;
     line-height: 1.5;
 }
 
-/* =========================================
+
+/* =========================================================
    MODAL
-========================================= */
+========================================================= */
 
 .modal {
     display: none;
@@ -277,12 +386,12 @@ a {
     width: 100%;
     height: 100%;
 
+    padding: 20px;
+
     background: rgba(0, 0, 0, 0.65);
 
     justify-content: center;
     align-items: center;
-
-    padding: 20px;
 }
 
 .modal-box {
@@ -294,11 +403,11 @@ a {
 
     overflow-y: auto;
 
-    background: #fff;
+    padding: 30px;
+
+    background: #ffffff;
 
     border-radius: 18px;
-
-    padding: 30px;
 }
 
 .modal-box h2 {
@@ -316,16 +425,15 @@ a {
     top: 12px;
     right: 20px;
 
+    color: #555;
+
     font-size: 32px;
 
     cursor: pointer;
-
-    color: #555;
 }
 
 .phone-box {
     margin-top: 20px;
-
     padding: 20px;
 
     background: #f7f7f7;
@@ -334,12 +442,14 @@ a {
 }
 
 .phone-box h3 {
-    font-size: 22px;
     margin-bottom: 10px;
+
+    font-size: 22px;
 }
 
 .phone-box li {
     margin-bottom: 10px;
+
     line-height: 1.5;
 }
 
@@ -349,27 +459,24 @@ a {
     width: 100%;
 
     margin-top: 20px;
-
     padding: 14px;
 
     border: none;
-
     border-radius: 10px;
 
     background: #5b2bb5;
-
-    color: #fff;
+    color: #ffffff;
 
     font-size: 17px;
-
     font-weight: bold;
 
     cursor: pointer;
 }
 
-/* =========================================
+
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -378,12 +485,19 @@ a {
     }
 
     .card {
+        width: 100%;
         padding: 20px;
+
         border-radius: 14px;
+    }
+
+    .logo {
+        margin-bottom: 30px;
     }
 
     .logo img {
         width: 280px;
+        max-width: 90%;
     }
 
     h2 {
@@ -394,16 +508,25 @@ a {
         font-size: 24px;
     }
 
-    /* KEEP HEAD OFFICE IMAGE SMALL */
 
-    .head-office {
+    /* -----------------------------------------
+       HEAD OFFICE MOBILE
+    ----------------------------------------- */
+
+    .card .section .head-office {
         display: flex !important;
         flex-direction: row !important;
+
         align-items: flex-start !important;
+
         gap: 15px !important;
+
+        width: 100% !important;
     }
 
-    .head-office-img {
+    .card .section .head-office > img.head-office-img {
+        display: block !important;
+
         width: 100px !important;
         height: 100px !important;
 
@@ -416,10 +539,18 @@ a {
         flex: 0 0 100px !important;
 
         object-fit: cover !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    .head-office-info {
+    .card .section .head-office > .head-office-info {
+        width: auto !important;
+
+        max-width: calc(100% - 115px) !important;
+
         flex: 1 1 auto !important;
+
         min-width: 0 !important;
     }
 
@@ -437,23 +568,38 @@ a {
 }
 
 
-/* =========================================
-   FINAL IMAGE SAFETY OVERRIDE
-   PREVENTS ANY OTHER IMAGE RULE
-   FROM MAKING HEAD OFFICE HUGE
-========================================= */
+/* =========================================================
+   FINAL EMERGENCY OVERRIDE
+   DO NOT DELETE
+========================================================= */
 
-.head-office > .head-office-img {
+/*
+   This prevents ANY generic img rule from
+   stretching the Head Office photograph.
+*/
+
+body .card .section .head-office > img.head-office-img {
     width: 100px !important;
     height: 100px !important;
 
-    max-width: 100px !important;
     min-width: 100px !important;
+    max-width: 100px !important;
 
-    max-height: 100px !important;
     min-height: 100px !important;
+    max-height: 100px !important;
 
-    flex: 0 0 100px !important;
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: 100px !important;
+
+    display: block !important;
 
     object-fit: cover !important;
+
+    float: none !important;
+
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 }
