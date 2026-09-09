@@ -1,43 +1,32 @@
 /* =========================================
-   MOBILE CONCEPTZ
-   COMPLETE STYLE.CSS
+   MOBILE CONCEPTZ - MAIN CSS
 ========================================= */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 html {
-    width: 100%;
-    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #f3f3f7;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+    margin: 0;
     padding: 20px;
-    width: 100%;
-    overflow-x: hidden;
+    background: #f3f3f5;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111;
 }
-
-
-/* =========================================
-   MAIN CARD
-========================================= */
 
 .card {
     width: 100%;
     max-width: 700px;
     margin: 0 auto;
-    background: #ffffff;
-    border-radius: 18px;
+    background: #fff;
     padding: 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.10);
 }
-
 
 /* =========================================
    LOGO
@@ -45,112 +34,85 @@ body {
 
 .logo {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .logo img {
     display: block;
-    width: 60%;
-    max-width: 360px;
-    min-width: 220px;
+    width: 330px;
+    max-width: 90%;
     height: auto;
     margin: 0 auto;
 }
-
 
 /* =========================================
    HEADINGS
 ========================================= */
 
 h2 {
-    color: #5B2DA8;
+    color: #5b2bb5;
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 32px;
+    font-size: 30px;
+    margin: 20px 0;
 }
 
 h3 {
-    color: #5B2DA8;
-    font-size: 30px;
-    margin-bottom: 12px;
+    color: #5b2bb5;
+    font-size: 28px;
+    margin: 0 0 15px 0;
 }
 
-
 /* =========================================
-   PARAGRAPHS
+   SERVICES
 ========================================= */
 
-p {
+.card > p {
+    text-align: center;
     font-size: 18px;
     line-height: 1.6;
+    margin-bottom: 35px;
 }
 
-
 /* =========================================
-   SECTIONS
+   SECTION
 ========================================= */
 
 .section {
-    width: 100%;
-    border-top: 1px solid #dddddd;
-    padding-top: 18px;
-    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 25px;
+    margin-top: 25px;
 }
-
-
-/* =========================================
-   GOOGLE MAP BUTTON
-========================================= */
-
-.map-btn {
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 12px;
-}
-
 
 /* =========================================
    HEAD OFFICE
 ========================================= */
 
 .head-office {
-    width: 100%;
     display: flex;
     align-items: flex-start;
     gap: 20px;
+    width: 100%;
 }
 
-
 /* IMPORTANT:
-   This prevents the Head Office photo
-   from becoming huge.
+   Keep Head Office photo small.
 */
 
 .head-office-img {
     display: block !important;
-
-    width: 100px !important;
-    min-width: 100px !important;
-    max-width: 100px !important;
-
-    height: 100px !important;
-    min-height: 100px !important;
-    max-height: 100px !important;
-
+    width: 110px !important;
+    height: 110px !important;
+    max-width: 110px !important;
+    min-width: 110px !important;
     object-fit: cover;
-
-    border-radius: 12px;
-
-    flex: 0 0 100px;
-
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+    flex-shrink: 0;
 }
-
 
 /* Head Office text */
 
 .head-office-info {
-    flex: 1 1 auto;
+    flex: 1;
     min-width: 0;
 }
 
@@ -159,6 +121,11 @@ p {
     margin-bottom: 12px;
 }
 
+.head-office-info p {
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 8px 0;
+}
 
 /* =========================================
    OUTLETS
@@ -166,424 +133,199 @@ p {
 
 .outlet {
     width: 100%;
-    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .outlet-details {
     width: 100%;
-    font-size: 18px;
-    line-height: 1.6;
 }
 
 .outlet-details strong {
-    font-weight: bold;
-}
-
-
-/* =========================================
-   NORTH
-========================================= */
-
-.north-outlet {
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-
-/* =========================================
-   CALL BUTTON
-========================================= */
-
-.call-btn {
     display: block;
-    width: 100%;
-    box-sizing: border-box;
-
-    background: #5B2DA8;
-    color: #ffffff;
-
-    text-align: center;
-    text-decoration: none;
-
-    border: none;
-    border-radius: 15px;
-
-    padding: 18px 20px;
-    margin: 25px 0;
-
-    font-size: 22px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.15s ease,
-        background 0.15s ease;
+    font-size: 18px;
+    margin-bottom: 8px;
 }
 
-.call-btn:hover {
-    background: #4d2490;
-    color: #ffffff;
+.outlet-details p {
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 8px 0;
 }
-
-.call-btn:active {
-    transform: scale(0.98);
-}
-
 
 /* =========================================
-   SAVE CONTACT
+   LINKS
 ========================================= */
 
+a {
+    color: #0000ee;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.call-btn,
 .save-contact {
     display: block;
     width: 100%;
-    box-sizing: border-box;
-
-    background: #5B2DA8;
-    color: #ffffff;
-
     text-align: center;
     text-decoration: none;
-
-    border: none;
-    border-radius: 15px;
-
-    padding: 18px 20px;
-    margin: 25px 0;
-
-    font-size: 22px;
+    padding: 16px 20px;
+    margin-top: 15px;
+    border-radius: 12px;
+    font-size: 18px;
     font-weight: bold;
-
     cursor: pointer;
-
-    transition:
-        transform 0.15s ease,
-        background 0.15s ease;
+    border: none;
 }
 
+.call-btn {
+    background: #5b2bb5;
+    color: #fff;
+}
+
+.save-contact {
+    background: #5b2bb5;
+    color: #fff;
+}
+
+.call-btn:hover,
 .save-contact:hover {
-    background: #4d2490;
-    color: #ffffff;
+    opacity: 0.9;
 }
-
-.save-contact:active {
-    transform: scale(0.98);
-}
-
 
 /* =========================================
-   TOP UP QR CARD
+   TOP UP
 ========================================= */
 
 .topup {
-    width: 100%;
-    margin-top: 35px;
-
-    background: #fafafa;
-
-    border-radius: 18px;
-
+    margin-top: 30px;
     padding: 25px;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.08);
-
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     text-align: center;
 }
-
-
-/* Top Up heading */
 
 .topup h2 {
-    color: #5B2DA8;
-    font-size: 34px;
-    margin: 0 0 20px 0;
-    text-align: center;
+    margin-top: 0;
 }
-
-
-/* QR CODE */
 
 .topup img {
     display: block;
-
     width: 220px;
     max-width: 100%;
     height: auto;
-
     margin: 20px auto;
-
-    border-radius: 12px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 6px 18px rgba(0, 0, 0, 0.12);
 }
-
-
-/* QR description */
 
 .topup p {
-    color: #555555;
     font-size: 16px;
     line-height: 1.5;
-    margin: 18px 0 0 0;
 }
 
-
 /* =========================================
-   SAVE TO HOME SCREEN MODAL
+   MODAL
 ========================================= */
 
 .modal {
     display: none;
-
     position: fixed;
-
+    z-index: 9999;
     left: 0;
     top: 0;
-
     width: 100%;
     height: 100%;
-
-    background: rgba(0, 0, 0, 0.55);
-
+    background: rgba(0, 0, 0, 0.65);
     justify-content: center;
     align-items: center;
-
-    z-index: 9999;
+    padding: 20px;
 }
-
-
-/* Modal box */
 
 .modal-box {
-    width: 90%;
-    max-width: 450px;
-
-    background: #ffffff;
-
-    border-radius: 20px;
-
-    padding: 30px;
-
     position: relative;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.25);
-
-    animation: popup 0.25s ease;
+    width: 100%;
+    max-width: 550px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
 }
-
-
-/* Modal animation */
-
-@keyframes popup {
-
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-}
-
-
-/* Close button */
-
-.close {
-    position: absolute;
-
-    top: 12px;
-    right: 18px;
-
-    font-size: 34px;
-
-    cursor: pointer;
-
-    color: #5B2DA8;
-
-    font-weight: bold;
-}
-
-
-/* Modal heading */
 
 .modal-box h2 {
-    text-align: center;
-    color: #5B2DA8;
-    margin-bottom: 12px;
+    margin-top: 0;
 }
-
-
-/* Modal introduction */
 
 .modal-intro {
     text-align: center;
-    color: #666666;
-    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-
-/* =========================================
-   PHONE INSTRUCTIONS
-========================================= */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #555;
+}
 
 .phone-box {
-    background: #f7f4ff;
-
+    margin-top: 20px;
+    padding: 20px;
+    background: #f7f7f7;
     border-radius: 12px;
-
-    padding: 15px;
-
-    margin-bottom: 18px;
 }
 
 .phone-box h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #5B2DA8;
 }
 
-.phone-box ol {
-    padding-left: 22px;
-
-    line-height: 1.8;
-
-    font-size: 17px;
+.phone-box li {
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
-
-
-/* =========================================
-   DONE BUTTON
-========================================= */
 
 .done-btn {
+    display: block;
     width: 100%;
-
-    padding: 16px;
-
-    background: #5B2DA8;
-    color: #ffffff;
-
+    margin-top: 20px;
+    padding: 14px;
     border: none;
-
-    border-radius: 14px;
-
-    font-size: 20px;
-
+    border-radius: 10px;
+    background: #5b2bb5;
+    color: #fff;
+    font-size: 17px;
     font-weight: bold;
-
     cursor: pointer;
-
-    transition: 0.3s;
 }
-
-.done-btn:hover {
-    background: #47218f;
-}
-
 
 /* =========================================
-   MOBILE RESPONSIVE
-========================================= */
-
-@media (max-width: 1000px) {
-
-    body {
-        padding: 12px;
-    }
-
-    .card {
-        width: 100%;
-        padding: 20px;
-    }
-
-    .logo img {
-        max-width: 260px;
-    }
-
-    h2 {
-        font-size: 28px;
-    }
-
-    h3 {
-        font-size: 24px;
-    }
-
-    p {
-        font-size: 17px;
-    }
-
-    .call-btn,
-    .save-contact {
-        font-size: 20px;
-        padding: 16px;
-    }
-
-    .topup img {
-        width: 180px;
-    }
-
-    /* Head Office */
-
-    .head-office {
-        display: flex;
-        gap: 20px;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .head-office-img {
-        width: 100px !important;
-        min-width: 100px !important;
-        max-width: 100px !important;
-
-        height: 100px !important;
-        min-height: 100px !important;
-        max-height: 100px !important;
-
-        flex: 0 0 100px;
-    }
-
-    .head-office-info {
-        flex: 1 1 auto;
-        min-width: 0;
-    }
-
-    .outlet-details {
-        font-size: 17px;
-        line-height: 1.5;
-    }
-
-}
-
-
-/* =========================================
-   SMALL MOBILE
+   MOBILE
 ========================================= */
 
 @media (max-width: 600px) {
 
     body {
-        padding: 8px;
+        padding: 10px;
     }
 
     .card {
-        padding: 18px;
-        border-radius: 15px;
+        padding: 20px;
+        border-radius: 14px;
     }
 
     .logo img {
-        width: 80%;
-        min-width: 180px;
-        max-width: 240px;
+        width: 280px;
     }
 
     h2 {
@@ -591,11 +333,7 @@ p {
     }
 
     h3 {
-        font-size: 23px;
-    }
-
-    p {
-        font-size: 16px;
+        font-size: 24px;
     }
 
     .head-office {
@@ -604,67 +342,16 @@ p {
 
     .head-office-img {
         width: 90px !important;
-        min-width: 90px !important;
-        max-width: 90px !important;
-
         height: 90px !important;
-        min-height: 90px !important;
-        max-height: 90px !important;
-
-        flex-basis: 90px;
+        max-width: 90px !important;
+        min-width: 90px !important;
     }
 
-    .head-office-info {
-        min-width: 0;
-    }
-
-    .head-office-info h3 {
-        font-size: 23px;
-    }
-
-    .outlet-details {
+    .head-office-info p {
         font-size: 16px;
     }
 
-    .call-btn,
-    .save-contact {
-        font-size: 19px;
-        padding: 16px 14px;
+    .outlet-details p {
+        font-size: 16px;
     }
-
-    .topup {
-        margin-top: 30px;
-        padding: 22px 16px;
-    }
-
-    .topup h2 {
-        font-size: 28px;
-    }
-
-    .topup img {
-        width: 200px;
-    }
-
-    .modal-box {
-        width: 94%;
-        padding: 24px;
-    }
-
-}
-
-
-/* =========================================
-   FINAL SAFETY FIX
-   PREVENT IMAGES FROM BREAKING LAYOUT
-========================================= */
-
-.head-office > img.head-office-img {
-    width: 100px !important;
-    height: 100px !important;
-    max-width: 100px !important;
-    min-width: 100px !important;
-    max-height: 100px !important;
-    min-height: 100px !important;
-    object-fit: cover !important;
-    flex: 0 0 100px !important;
 }
