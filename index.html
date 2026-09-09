@@ -54,21 +54,30 @@ Attractive Trade-In prices.
      HEAD OFFICE
 ========================================= -->
 
-<!-- =========================================
-     HEAD OFFICE
-========================================= -->
+<div class="section">
+
+<div class="head-office">
+
 
 <img
 src="head-office.png"
 alt="Mobile Conceptz Head Office"
 class="head-office-img"
 >
-<strong>
-11 Woodlands Close
-</strong>
+
+
+<div class="head-office-info">
+
+<h3>
+Head Office
+</h3>
 
 
 <p>
+
+<strong>
+11 Woodlands Close
+</strong><br>
 
 #06-12 Woodlands 11<br>
 Singapore 737853
@@ -96,12 +105,12 @@ class="map-btn"
 
 </a>
 
-
 </div>
 
 </div>
 
 </div>
+
 
 <!-- =========================================
      NORTH
@@ -109,7 +118,9 @@ class="map-btn"
 
 <div class="section">
 
-<h3>NORTH</h3>
+<h3>
+NORTH
+</h3>
 
 
 <!-- HOUGANG -->
@@ -286,7 +297,9 @@ class="map-btn"
 
 <div class="section">
 
-<h3>WEST</h3>
+<h3>
+WEST
+</h3>
 
 
 <!-- JURONG WEST -->
@@ -380,7 +393,9 @@ class="map-btn"
 
 <div class="section">
 
-<h3>EAST</h3>
+<h3>
+EAST
+</h3>
 
 
 <!-- TAMPINES -->
@@ -452,21 +467,9 @@ class="save-contact"
 download
 >
 
-📥 Save Contact
+📱 Save Contact
 
 </a>
-
-
-<!-- SAVE TO HOME SCREEN -->
-
-<button
-class="call-btn"
-onclick="openModal()"
->
-
-⭐ Save to Home Screen
-
-</button>
 
 
 <!-- =========================================
@@ -487,8 +490,40 @@ alt="Scan to Top Up QR Code"
 
 
 <p>
+
 Scan this QR code to top up your mobile service.
+
 </p>
+
+</div>
+
+
+<!-- =========================================
+     ADD TO HOME SCREEN
+========================================= -->
+
+<div class="topup">
+
+<h2>
+⭐ Add to Home Screen
+</h2>
+
+
+<p>
+
+Save Mobile Conceptz to your phone for quick access.
+
+</p>
+
+
+<button
+class="call-btn"
+onclick="openModal()"
+>
+
+⭐ Show Instructions
+
+</button>
 
 
 </div>
@@ -505,6 +540,7 @@ Scan this QR code to top up your mobile service.
 id="homeModal"
 class="modal"
 >
+
 
 <div class="modal-box">
 
@@ -537,7 +573,10 @@ Follow the instructions below to save this e-name card to your phone.
 
 <div class="phone-box">
 
-<h3>📱 iPhone</h3>
+<h3>
+📱 iPhone
+</h3>
+
 
 <ol>
 
@@ -569,7 +608,10 @@ Tap <strong>Add</strong>.
 
 <div class="phone-box">
 
-<h3>🤖 Android</h3>
+<h3>
+🤖 Android
+</h3>
+
 
 <ol>
 
@@ -615,6 +657,7 @@ Done
 
 <script>
 
+
 function openModal(){
 
 document.getElementById("homeModal").style.display = "flex";
@@ -641,6 +684,7 @@ closeModal();
 }
 
 };
+
 
 </script>
 
