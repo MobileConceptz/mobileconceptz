@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mobile Conceptz</title>
 
@@ -16,6 +15,11 @@ content="width=device-width, initial-scale=1.0">
 
 
 <body>
+
+
+<!-- =========================================
+     MAIN CARD
+========================================= -->
 
 <div class="card">
 
@@ -59,12 +63,19 @@ Attractive Trade-In prices.
 <div class="head-office">
 
 
+<!-- HEAD OFFICE PHOTO -->
+
+<div class="head-office-img">
+
 <img
 src="head-office.png"
 alt="Mobile Conceptz Head Office"
-class="head-office-img"
 >
 
+</div>
+
+
+<!-- HEAD OFFICE DETAILS -->
 
 <div class="head-office-info">
 
@@ -80,6 +91,7 @@ Head Office
 </strong><br>
 
 #06-12 Woodlands 11<br>
+
 Singapore 737853
 
 </p>
@@ -150,6 +162,7 @@ Tel:
 
 </p>
 
+
 <a
 href="https://maps.google.com/?q=Blk+205+Hougang+Street+21+Singapore+530205"
 target="_blank"
@@ -190,6 +203,7 @@ Tel:
 </a>
 
 </p>
+
 
 <a
 href="https://maps.google.com/?q=Blk+19+Marsiling+Lane+Singapore+730019"
@@ -232,6 +246,7 @@ Tel:
 
 </p>
 
+
 <a
 href="https://maps.google.com/?q=Blk+768+Woodlands+Ave+6+Singapore+730768"
 target="_blank"
@@ -273,6 +288,7 @@ Tel:
 
 </p>
 
+
 <a
 href="https://maps.google.com/?q=Blk+548+Woodlands+Drive+44+Singapore+730548"
 target="_blank"
@@ -286,7 +302,6 @@ class="map-btn"
 </div>
 
 </div>
-
 
 </div>
 
@@ -327,6 +342,7 @@ Tel:
 </a>
 
 </p>
+
 
 <a
 href="https://maps.google.com/?q=Blk+960+Jurong+West+Street+92+Singapore+640960"
@@ -369,6 +385,7 @@ Tel:
 
 </p>
 
+
 <a
 href="https://maps.google.com/?q=Blk+634+Bukit+Batok+Central+Singapore+650634"
 target="_blank"
@@ -382,7 +399,6 @@ class="map-btn"
 </div>
 
 </div>
-
 
 </div>
 
@@ -424,6 +440,7 @@ Tel:
 
 </p>
 
+
 <a
 href="https://maps.google.com/?q=Blk+201B+Tampines+Street+21+Singapore+522201"
 target="_blank"
@@ -437,7 +454,6 @@ class="map-btn"
 </div>
 
 </div>
-
 
 </div>
 
@@ -473,6 +489,37 @@ download
 
 
 <!-- =========================================
+     ADD TO HOME SCREEN
+========================================= -->
+
+<div class="home-screen">
+
+<h2>
+⭐ Add to Home Screen
+</h2>
+
+
+<p>
+
+Save Mobile Conceptz to your phone for quick access.
+
+</p>
+
+
+<button
+type="button"
+class="call-btn"
+onclick="openModal()"
+>
+
+📱 Show Instructions
+
+</button>
+
+</div>
+
+
+<!-- =========================================
      SCAN TO TOP UP
 ========================================= -->
 
@@ -498,38 +545,8 @@ Scan this QR code to top up your mobile service.
 </div>
 
 
-<!-- =========================================
-     ADD TO HOME SCREEN
-========================================= -->
-
-<div class="topup">
-
-<h2>
-⭐ Add to Home Screen
-</h2>
-
-
-<p>
-
-Save Mobile Conceptz to your phone for quick access.
-
-</p>
-
-
-<button
-class="call-btn"
-onclick="openModal()"
->
-
-⭐ Show Instructions
-
-</button>
-
-
 </div>
-
-
-</div>
+<!-- END MAIN CARD -->
 
 
 <!-- =========================================
@@ -544,6 +561,8 @@ class="modal"
 
 <div class="modal-box">
 
+
+<!-- CLOSE BUTTON -->
 
 <span
 class="close"
@@ -636,7 +655,10 @@ Tap <strong>Add</strong>.
 </div>
 
 
+<!-- DONE -->
+
 <button
+type="button"
 class="done-btn"
 onclick="closeModal()"
 >
@@ -674,8 +696,7 @@ document.getElementById("homeModal").style.display = "none";
 
 window.onclick = function(event){
 
-const modal =
-document.getElementById("homeModal");
+const modal = document.getElementById("homeModal");
 
 if(event.target === modal){
 
