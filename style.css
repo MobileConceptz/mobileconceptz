@@ -88,37 +88,55 @@ h3 {
 ========================================= */
 
 .head-office {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 20px !important;
+    width: 100% !important;
+    position: relative !important;
 }
 
-/* IMPORTANT:
-   Keep Head Office photo small.
-*/
+/* FORCE HEAD OFFICE IMAGE TO STAY SMALL */
 
-.head-office-img {
+.head-office img.head-office-img {
     display: block !important;
+
     width: 110px !important;
     height: 110px !important;
-    max-width: 110px !important;
+
     min-width: 110px !important;
-    object-fit: cover;
-    border-radius: 14px;
-    flex-shrink: 0;
+    max-width: 110px !important;
+
+    min-height: 110px !important;
+    max-height: 110px !important;
+
+    object-fit: cover !important;
+
+    border-radius: 14px !important;
+
+    flex: 0 0 110px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Head Office text */
+
+/* HEAD OFFICE TEXT */
+
 
 .head-office-info {
-    flex: 1;
-    min-width: 0;
+    display: block !important;
+
+    flex: 1 1 auto !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    position: relative !important;
 }
 
 .head-office-info h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
+    margin: 0 0 12px 0 !important;
 }
 
 .head-office-info p {
