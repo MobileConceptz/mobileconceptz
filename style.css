@@ -122,40 +122,29 @@ h3 {
    Text stays on the right.
 */
 
-.card .section .head-office {
+/* =========================================
+   HEAD OFFICE - FIXED LAYOUT
+========================================= */
+
+.head-office {
     display: flex !important;
     flex-direction: row !important;
     align-items: flex-start !important;
+    gap: 20px !important;
 
     width: 100% !important;
     max-width: 100% !important;
 
-    height: auto !important;
-    min-height: 100px !important;
-
     margin: 0 !important;
     padding: 0 !important;
 
-    gap: 20px !important;
-
-    position: relative !important;
-
-    overflow: visible !important;
+    overflow: hidden !important;
 }
 
 
-/* =========================================================
-   HEAD OFFICE PHOTO
-========================================================= */
+/* HEAD OFFICE PHOTO */
 
-/*
-   THIS IS THE IMPORTANT PART.
-
-   The selector is intentionally very specific
-   so other img rules cannot make this photo huge.
-*/
-
-.card .section .head-office > img.head-office-img {
+.head-office-img {
     display: block !important;
 
     width: 100px !important;
@@ -175,14 +164,39 @@ h3 {
     margin: 0 !important;
     padding: 0 !important;
 
-    border: 0 !important;
     border-radius: 12px !important;
 
-    position: relative !important;
-
     float: none !important;
+}
 
-    transform: none !important;
+
+/* HEAD OFFICE TEXT */
+
+.head-office-info {
+    display: block !important;
+
+    flex: 1 1 auto !important;
+
+    width: auto !important;
+    max-width: calc(100% - 120px) !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.head-office-info h3 {
+    margin: 0 0 12px 0 !important;
+    color: #5b2bb5;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.head-office-info p {
+    margin: 8px 0 !important;
+    font-size: 17px;
+    line-height: 1.55;
 }
 
 
@@ -499,47 +513,48 @@ a {
         width: 280px;
         max-width: 90%;
     }
+/* =========================================
+   HEAD OFFICE MOBILE
+========================================= */
 
-    h2 {
-        font-size: 26px;
-    }
+.head-office {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
 
-    h3 {
-        font-size: 24px;
-    }
+.head-office-img {
+    width: 90px !important;
+    height: 90px !important;
 
+    min-width: 90px !important;
+    max-width: 90px !important;
 
-    /* -----------------------------------------
-       HEAD OFFICE MOBILE
-    ----------------------------------------- */
+    min-height: 90px !important;
+    max-height: 90px !important;
 
-    .card .section .head-office {
-        display: flex !important;
-        flex-direction: row !important;
+    flex: 0 0 90px !important;
 
-        align-items: flex-start !important;
+    object-fit: cover !important;
+}
 
-        gap: 15px !important;
+.head-office-info {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    max-width: calc(100% - 105px) !important;
+    min-width: 0 !important;
+}
 
-        width: 100% !important;
-    }
+.head-office-info h3 {
+    font-size: 24px;
+}
 
-    .card .section .head-office > img.head-office-img {
-        display: block !important;
-
-        width: 100px !important;
-        height: 100px !important;
-
-        min-width: 100px !important;
-        max-width: 100px !important;
-
-        min-height: 100px !important;
-        max-height: 100px !important;
-
-        flex: 0 0 100px !important;
-
-        object-fit: cover !important;
-
+.head-office-info p {
+    font-size: 16px;
+}
         margin: 0 !important;
         padding: 0 !important;
     }
@@ -554,40 +569,7 @@ a {
         min-width: 0 !important;
     }
 
-    .head-office-info h3 {
-        font-size: 24px;
-    }
-
-    .head-office-info p {
-        font-size: 16px;
-    }
-
-    .outlet-details p {
-        font-size: 16px;
-    }
-}
-
-
-/* =========================================================
-   FINAL EMERGENCY OVERRIDE
-   DO NOT DELETE
-========================================================= */
-
-/*
-   This prevents ANY generic img rule from
-   stretching the Head Office photograph.
-*/
-
-body .card .section .head-office > img.head-office-img {
-    width: 100px !important;
-    height: 100px !important;
-
-    min-width: 100px !important;
-    max-width: 100px !important;
-
-    min-height: 100px !important;
-    max-height: 100px !important;
-
+   
     flex-grow: 0 !important;
     flex-shrink: 0 !important;
     flex-basis: 100px !important;
