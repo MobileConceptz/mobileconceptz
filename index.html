@@ -2,14 +2,397 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
+    <title>Mobile Conceptz</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
 
-<title>Mobile Conceptz</title>
+        * {
+            box-sizing: border-box;
+        }
 
-<link rel="stylesheet" href="style.css">
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f3f3f5;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
+        }
+
+        /* MAIN CARD */
+
+        .card {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.10);
+            overflow: hidden;
+        }
+
+        /* LOGO */
+
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            display: block;
+            width: 330px;
+            max-width: 90%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        /* HEADINGS */
+
+        h2 {
+            color: #5b2bb5;
+            text-align: center;
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        h3 {
+            color: #5b2bb5;
+            font-size: 28px;
+            margin: 0 0 15px 0;
+        }
+
+        /* SERVICES */
+
+        .services {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* SECTIONS */
+
+        .section {
+            width: 100%;
+            border-top: 1px solid #ddd;
+            padding-top: 25px;
+            margin-top: 25px;
+        }
+
+        /* =================================================
+           HEAD OFFICE
+        ================================================= */
+
+        .head-office {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /*
+           THIS CONTAINER PREVENTS THE PHOTO
+           FROM BECOMING FULL WIDTH.
+        */
+
+        .head-office-photo {
+            width: 110px;
+            height: 110px;
+            min-width: 110px;
+            max-width: 110px;
+            min-height: 110px;
+            max-height: 110px;
+            overflow: hidden;
+            border-radius: 14px;
+            flex-shrink: 0;
+        }
+
+        .head-office-photo img {
+            display: block;
+            width: 110px !important;
+            height: 110px !important;
+            min-width: 110px !important;
+            max-width: 110px !important;
+            min-height: 110px !important;
+            max-height: 110px !important;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .head-office-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .head-office-info h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .head-office-info p {
+            font-size: 17px;
+            line-height: 1.55;
+            margin: 8px 0;
+        }
+
+        /* OUTLETS */
+
+        .outlet {
+            width: 100%;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .outlet:last-child {
+            border-bottom: none;
+        }
+
+        .outlet strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .outlet p {
+            font-size: 17px;
+            line-height: 1.55;
+            margin: 8px 0;
+        }
+
+        /* LINKS */
+
+        a {
+            color: #0000ee;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        /* BUTTONS */
+
+        .call-btn,
+        .save-contact {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            padding: 16px 20px;
+            margin-top: 15px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+
+        .call-btn,
+        .save-contact {
+            background: #5b2bb5;
+            color: #ffffff;
+        }
+
+        /* TOP UP */
+
+        .topup {
+            width: 100%;
+            margin-top: 30px;
+            padding: 25px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .topup h2 {
+            margin-top: 0;
+        }
+
+        .topup img {
+            display: block;
+            width: 220px;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+        }
+
+        .topup p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* MODAL */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.65);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-box {
+            position: relative;
+            width: 100%;
+            max-width: 550px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #fff;
+            border-radius: 18px;
+            padding: 30px;
+        }
+
+        .modal-box h2 {
+            margin-top: 0;
+        }
+
+        .modal-intro {
+            text-align: center;
+            line-height: 1.5;
+        }
+
+        .close {
+            position: absolute;
+            top: 12px;
+            right: 20px;
+            font-size: 32px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .phone-box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 12px;
+        }
+
+        .phone-box h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .phone-box li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .done-btn {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #5b2bb5;
+            color: #fff;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .card {
+                padding: 20px;
+                border-radius: 14px;
+            }
+
+            .logo img {
+                width: 280px;
+                max-width: 90%;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .services {
+                font-size: 17px;
+            }
+
+            .head-office {
+                gap: 15px;
+            }
+
+            .head-office-photo {
+                width: 90px;
+                height: 90px;
+                min-width: 90px;
+                max-width: 90px;
+                min-height: 90px;
+                max-height: 90px;
+            }
+
+            .head-office-photo img {
+                width: 90px !important;
+                height: 90px !important;
+                min-width: 90px !important;
+                max-width: 90px !important;
+                min-height: 90px !important;
+                max-height: 90px !important;
+            }
+
+            .head-office-info p {
+                font-size: 16px;
+            }
+
+            .outlet p {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+
+            .card {
+                padding: 16px;
+            }
+
+            .head-office-photo {
+                width: 80px;
+                height: 80px;
+                min-width: 80px;
+                max-width: 80px;
+                min-height: 80px;
+                max-height: 80px;
+            }
+
+            .head-office-photo img {
+                width: 80px !important;
+                height: 80px !important;
+                min-width: 80px !important;
+                max-width: 80px !important;
+                min-height: 80px !important;
+                max-height: 80px !important;
+            }
+        }
+
+    </style>
 
 </head>
 
@@ -17,695 +400,509 @@
 <body>
 
 
-<!-- =========================================
-     MAIN CARD
-========================================= -->
-
 <div class="card">
 
 
-<!-- =========================================
-     LOGO
-========================================= -->
+    <!-- LOGO -->
 
-<div class="logo">
+    <div class="logo">
 
-<img
-src="logo.png"
-alt="Mobile Conceptz Logo"
->
+        <img
+            src="logo.png"
+            alt="Mobile Conceptz Logo"
+        >
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <h2>Our Services</h2>
+
+    <div class="services">
+
+        Sales of new &amp; used mobile phones.<br>
+        Wide range of mobile phone accessories.<br>
+        Mobile phone repair &amp; servicing.<br>
+        Attractive Trade-In prices.
+
+    </div>
+
+
+    <!-- HEAD OFFICE -->
+
+    <div class="section">
+
+        <div class="head-office">
+
+
+            <div class="head-office-photo">
+
+                <img
+                    src="head-office.png"
+                    alt="Mobile Conceptz Head Office"
+                >
+
+            </div>
+
+
+            <div class="head-office-info">
+
+                <h3>Head Office</h3>
+
+                <p>
+
+                    <strong>11 Woodlands Close</strong><br>
+                    #06-12 Woodlands 11<br>
+                    Singapore 737853
+
+                </p>
+
+                <p>
+
+                    Tel:
+                    <a href="tel:+6587578777">
+                        8757 8777
+                    </a>
+
+                </p>
+
+                <a
+                    href="https://maps.google.com/?q=11+Woodlands+Close+Singapore+737853"
+                    target="_blank"
+                    class="map-btn"
+                >
+                    📍 View on Google Maps
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- NORTH -->
+
+    <div class="section">
+
+        <h3>NORTH</h3>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 205 Hougang St 21
+            </strong>
+
+            <p>
+                #01-129<br>
+                Beside Guardian Pharmacy<br>
+                Singapore 530205
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6569882945">
+                    6988 2945
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=205+Hougang+Street+21+Singapore+530205"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 19 Marsiling Lane
+            </strong>
+
+            <p>
+                #01-295<br>
+                Singapore 730019
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6563860625">
+                    6386 0625
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+19+Marsiling+Lane+Singapore+730019"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 768 Woodlands Ave 6
+            </strong>
+
+            <p>
+                #01-22 Woodlands Mart<br>
+                Singapore 730768
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6563622677">
+                    6362 2677
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+768+Woodlands+Ave+6+Singapore+730768"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 548 Woodlands Dr 44
+            </strong>
+
+            <p>
+                #01-34 Vista Point<br>
+                Singapore 730548
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6565550410">
+                    6555 0410
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+548+Woodlands+Drive+44+Singapore+730548"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- WEST -->
+
+    <div class="section">
+
+        <h3>WEST</h3>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 960 Jurong West St 92
+            </strong>
+
+            <p>
+                #01-188<br>
+                Singapore 640960
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6567924577">
+                    6792 4577
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+960+Jurong+West+Street+92+Singapore+640960"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 634 Bukit Batok Central
+            </strong>
+
+            <p>
+                #01-112 Unit A<br>
+                Singapore 650634
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6565659177">
+                    6565 9177
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+634+Bukit+Batok+Central+Singapore+650634"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- EAST -->
+
+    <div class="section">
+
+        <h3>EAST</h3>
+
+
+        <div class="outlet">
+
+            <strong>
+                Blk 201B Tampines St 21
+            </strong>
+
+            <p>
+                #01-K2<br>
+                Singapore 522201
+            </p>
+
+            <p>
+                Tel:
+                <a href="tel:+6583941677">
+                    8394 1677
+                </a>
+            </p>
+
+            <a
+                href="https://maps.google.com/?q=Blk+201B+Tampines+Street+21+Singapore+522201"
+                target="_blank"
+                class="map-btn"
+            >
+                📍 View on Google Maps
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- CALL -->
+
+    <a
+        href="tel:+6587578777"
+        class="call-btn"
+    >
+        📞 Call Head Office
+    </a>
+
+
+    <!-- SAVE CONTACT -->
+
+    <a
+        href="contact.vcf"
+        class="save-contact"
+        download
+    >
+        📱 Save Contact
+    </a>
+
+
+    <!-- SAVE TO HOME -->
+
+    <a
+        href="#"
+        class="save-contact"
+        onclick="openModal(); return false;"
+    >
+        ⭐ Save to Home Screen
+    </a>
+
+
+    <!-- TOP UP -->
+
+    <div class="topup">
+
+        <h2>
+            📱 Scan to Top Up
+        </h2>
+
+        <a
+            href="topup-qr.png"
+            target="_blank"
+        >
+
+            <img
+                src="topup-qr.png"
+                alt="Mobile Conceptz Top Up QR Code"
+            >
+
+        </a>
+
+        <p>
+            Scan this QR code to top up your mobile service.
+        </p>
+
+    </div>
+
 
 </div>
 
 
-<!-- =========================================
-     SERVICES
-========================================= -->
-
-<h2>Our Services</h2>
-
-<p style="text-align:center;">
-
-Sales of new &amp; used mobile phones.<br>
-Wide range of mobile phone accessories.<br>
-Mobile phone repair &amp; servicing.<br>
-Attractive Trade-In prices.
-
-</p>
-
-
-<!-- =========================================
-     HEAD OFFICE
-========================================= -->
-
-<div class="section">
-
-<div class="head-office">
-
-
-<!-- HEAD OFFICE PHOTO -->
-
-<div class="head-office-img">
-
-<img
-src="head-office.png"
-alt="Mobile Conceptz Head Office"
->
-
-</div>
-
-
-<!-- HEAD OFFICE DETAILS -->
-
-<div class="head-office-info">
-
-<h3>
-Head Office
-</h3>
-
-
-<p>
-
-<strong>
-11 Woodlands Close
-</strong><br>
-
-#06-12 Woodlands 11<br>
-
-Singapore 737853
-
-</p>
-
-
-<p>
-
-Tel:
-<a href="tel:+6587578777">
-8757 8777
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=11+Woodlands+Close+Singapore+737853"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================
-     NORTH
-========================================= -->
-
-<div class="section">
-
-<h3>
-NORTH
-</h3>
-
-
-<!-- HOUGANG -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 205 Hougang St 21
-</strong>
-
-<p>
-
-#01-129<br>
-Beside Guardian Pharmacy<br>
-Singapore 530205
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6569882945">
-6988 2945
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+205+Hougang+Street+21+Singapore+530205"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- MARSLING -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 19 Marsiling Lane
-</strong>
-
-<p>
-
-#01-295<br>
-Singapore 730019
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6563860625">
-6386 0625
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+19+Marsiling+Lane+Singapore+730019"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- WOODLANDS AVE 6 -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 768 Woodlands Ave 6
-</strong>
-
-<p>
-
-#01-22 Woodlands Mart<br>
-Singapore 730768
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6563622677">
-6362 2677
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+768+Woodlands+Ave+6+Singapore+730768"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- WOODLANDS DR 44 -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 548 Woodlands Dr 44
-</strong>
-
-<p>
-
-#01-34 Vista Point<br>
-Singapore 730548
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6565550410">
-6555 0410
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+548+Woodlands+Drive+44+Singapore+730548"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================
-     WEST
-========================================= -->
-
-<div class="section">
-
-<h3>
-WEST
-</h3>
-
-
-<!-- JURONG WEST -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 960 Jurong West St 92
-</strong>
-
-<p>
-
-#01-188<br>
-Singapore 640960
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6567924577">
-6792 4577
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+960+Jurong+West+Street+92+Singapore+640960"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-
-<!-- BUKIT BATOK -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 634 Bukit Batok Central
-</strong>
-
-<p>
-
-#01-112 Unit A<br>
-Singapore 650634
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6565659177">
-6565 9177
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+634+Bukit+Batok+Central+Singapore+650634"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================
-     EAST
-========================================= -->
-
-<div class="section">
-
-<h3>
-EAST
-</h3>
-
-
-<!-- TAMPINES -->
-
-<div class="outlet">
-
-<div class="outlet-details">
-
-<strong>
-Blk 201B Tampines St 21
-</strong>
-
-<p>
-
-#01-K2<br>
-Singapore 522201
-
-</p>
-
-<p>
-
-Tel:
-<a href="tel:+6583941677">
-8394 1677
-</a>
-
-</p>
-
-
-<a
-href="https://maps.google.com/?q=Blk+201B+Tampines+Street+21+Singapore+522201"
-target="_blank"
-class="map-btn"
->
-
-📍 View on Google Maps
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =========================================
-     BOTTOM ACTION BUTTONS
-========================================= -->
-
-
-<!-- CALL HEAD OFFICE -->
-
-<a
-href="tel:+6587578777"
-class="call-btn"
->
-
-📞 Call Head Office
-
-</a>
-
-
-<!-- SAVE CONTACT -->
-
-<a
-href="contact.vcf"
-class="save-contact"
-download
->
-
-📱 Save Contact
-
-</a>
-
-
-<!-- =========================================
-     ADD TO HOME SCREEN
-========================================= -->
-
-<div class="home-screen">
-
-<h2>
-⭐ Add to Home Screen
-</h2>
-
-
-<p>
-
-Save Mobile Conceptz to your phone for quick access.
-
-</p>
-
-
-<button
-type="button"
-class="call-btn"
-onclick="openModal()"
->
-
-📱 Show Instructions
-
-</button>
-
-</div>
-
-
-<!-- =========================================
-     SCAN TO TOP UP
-========================================= -->
-
-<div class="topup">
-
-<h2>
-📱 Scan to Top Up
-</h2>
-
-
-<img
-src="topup-qr.png"
-alt="Scan to Top Up QR Code"
->
-
-
-<p>
-
-Scan this QR code to top up your mobile service.
-
-</p>
-
-</div>
-
-
-</div>
-<!-- END MAIN CARD -->
-
-
-<!-- =========================================
+<!-- =====================================================
      HOME SCREEN MODAL
-========================================= -->
+===================================================== -->
 
 <div
-id="homeModal"
-class="modal"
+    id="homeModal"
+    class="modal"
 >
 
+    <div class="modal-box">
 
-<div class="modal-box">
-
-
-<!-- CLOSE BUTTON -->
-
-<span
-class="close"
-onclick="closeModal()"
->
-
-&times;
-
-</span>
+        <span
+            class="close"
+            onclick="closeModal()"
+        >
+            ×
+        </span>
 
 
-<h2>
-Add to Home Screen
-</h2>
+        <h2>
+            ⭐ Save to Home Screen
+        </h2>
 
 
-<p class="modal-intro">
+        <p class="modal-intro">
 
-Follow the instructions below to save this e-name card to your phone.
+            Save Mobile Conceptz to your phone
+            for quick access.
 
-</p>
-
-
-<!-- =========================================
-     IPHONE
-========================================= -->
-
-<div class="phone-box">
-
-<h3>
-📱 iPhone
-</h3>
+        </p>
 
 
-<ol>
+        <div class="phone-box">
 
-<li>
-Open this page in Safari.
-</li>
+            <h3>📱 iPhone</h3>
 
-<li>
-Tap the <strong>Share</strong> button.
-</li>
+            <ol>
 
-<li>
-Scroll down and tap
-<strong>Add to Home Screen</strong>.
-</li>
+                <li>
+                    Open this page in Safari.
+                </li>
 
-<li>
-Tap <strong>Add</strong>.
-</li>
+                <li>
+                    Tap the <strong>Share</strong> button.
+                </li>
 
-</ol>
+                <li>
+                    Select
+                    <strong>Add to Home Screen</strong>.
+                </li>
 
-</div>
+                <li>
+                    Tap <strong>Add</strong>.
+                </li>
 
+            </ol>
 
-<!-- =========================================
-     ANDROID
-========================================= -->
-
-<div class="phone-box">
-
-<h3>
-🤖 Android
-</h3>
+        </div>
 
 
-<ol>
+        <div class="phone-box">
 
-<li>
-Open this page in Chrome.
-</li>
+            <h3>🤖 Android</h3>
 
-<li>
-Tap the <strong>three dots</strong> menu.
-</li>
+            <ol>
 
-<li>
-Tap <strong>Add to Home screen</strong>.
-</li>
+                <li>
+                    Open this page in Chrome.
+                </li>
 
-<li>
-Tap <strong>Add</strong>.
-</li>
+                <li>
+                    Tap the <strong>⋮ menu</strong>.
+                </li>
 
-</ol>
+                <li>
+                    Select
+                    <strong>Add to Home screen</strong>.
+                </li>
+
+                <li>
+                    Tap <strong>Add</strong>.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+        <button
+            class="done-btn"
+            onclick="closeModal()"
+        >
+            Done
+        </button>
+
+    </div>
 
 </div>
 
 
-<!-- DONE -->
-
-<button
-type="button"
-class="done-btn"
-onclick="closeModal()"
->
-
-Done
-
-</button>
-
-
-</div>
-
-</div>
-
-
-<!-- =========================================
-     JAVASCRIPT
-========================================= -->
+<!-- JAVASCRIPT -->
 
 <script>
 
+function openModal() {
 
-function openModal(){
-
-document.getElementById("homeModal").style.display = "flex";
-
-}
-
-
-function closeModal(){
-
-document.getElementById("homeModal").style.display = "none";
+    document.getElementById("homeModal").style.display = "flex";
 
 }
 
+function closeModal() {
 
-window.onclick = function(event){
-
-const modal = document.getElementById("homeModal");
-
-if(event.target === modal){
-
-closeModal();
+    document.getElementById("homeModal").style.display = "none";
 
 }
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("homeModal");
+
+    if (event.target === modal) {
+
+        closeModal();
+
+    }
 
 };
-
 
 </script>
 
